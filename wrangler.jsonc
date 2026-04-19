@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "skytip-simple",
+  "compatibility_date": "2025-04-04",
+  "main": "./workers/app.ts",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "OWNER_HANDLE": "kayakyakr.bsky.social",
+  },
+  "secrets": {
+    "required": ["OAUTH_PRIVATE_JWK"],
+  },
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "9f5ac05622544d82bdb461574a58ff71",
+    },
+  ],
+}
